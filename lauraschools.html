@@ -52,17 +52,18 @@ const lauraschoolsLabels = {
         symbol: {
           type: "text",
           color: "#FFFFFF",
-          haloColor: "#5E8D74",
+          haloColor: "#000000",
           haloSize: "1px",
           font: {
-            size: "9px",
+            size: "12px",
             family: "Noto Sans",
             style: "normal",
-            weight: "normal"
+            weight: "normal",
+            deconflictionStrategy: "none"
           }
         },
 
-        labelPlacement: "above-left",
+        labelPlacement: "above-center",
         labelExpressionInfo: {
           expression: "$feature.SchoolName"
         }
