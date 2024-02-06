@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS Maps SDK for JavaScript Tutorials: Add a feature layer</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
+
+  <script>
+  require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/layers/FeatureLayer"
+
+  ], function(esriConfig, Map, MapView, FeatureLayer) {
+
+  esriConfig.apiKey = "AAPK368bf0fc99bb4b51bd5056b81ab66669CEi1rOeVc1Oek8xaTBYvc_FAy4P0mjEDxCoUW1nvEAynxjEUWmLUv2YYAMW2OK1k";
+
+  const map = new Map({
+    basemap: "arcgis/topographic"
+  });
+
+  const view = new MapView({
+    container: "viewDiv",
+    map: map,
+    center: [-80.03848,43.43742],
+    zoom: 13
+  });
+
+//lauraschools feature layer (points)
+  const lauraschoolsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0"
+  });
+
+  map.addlauraschoolsLayer);
+</script>
+
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
