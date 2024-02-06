@@ -12,7 +12,7 @@
       width: 100%;
     }
   </style>
-  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/dark/main.css">
   <script src="https://js.arcgis.com/4.28/"></script>
 
   <script>
@@ -28,14 +28,14 @@
   //esriConfig.apiKey = "AAPK368bf0fc99bb4b51bd5056b81ab66669CEi1rOeVc1Oek8xaTBYvc_FAy4P0mjEDxCoUW1nvEAynxjEUWmLUv2YYAMW2OK1k";
 
   const map = new Map({
-    basemap: "arcgis/topographic"
+    basemap: "arcgis/navigation"
   });
 
   const view = new MapView({
     container: "viewDiv",
     map: map,
-    center: [-80.03848,43.43742],
-    zoom: 13
+    center: [-79.54285,43.68883],
+    zoom: 9
   });
 
 //lauraschools feature layer (points)
