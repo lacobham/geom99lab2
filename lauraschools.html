@@ -23,7 +23,7 @@
 
     "esri/layers/FeatureLayer"
 
-  ], function(esriConfig, Map, MapView, FeatureLayer) {
+  ], function(esriConfig, Map, MapView, FeatureLayer, Renderer) {
 
   //esriConfig.apiKey = "AAPK368bf0fc99bb4b51bd5056b81ab66669CEi1rOeVc1Oek8xaTBYvc_FAy4P0mjEDxCoUW1nvEAynxjEUWmLUv2YYAMW2OK1k";
 
@@ -38,11 +38,6 @@
     zoom: 8
   });
 
-//lauraschools feature layer (points)
-  const lauraschoolsLayer = new FeatureLayer({
-    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/ArcGIS/rest/services/LauraSchools/FeatureServer"
-  });
-
   const lauraschoolsRenderer = {
         "type": "simple",
         "symbol": {
@@ -52,6 +47,12 @@
           "height": "25px"
         }
       }
+
+//lauraschools feature layer (points)
+  const lauraschoolsLayer = new FeatureLayer({
+    url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/ArcGIS/rest/services/LauraSchools/FeatureServer"
+    renderer: lauraschoolsRenderer
+  });
     
   map.add(lauraschoolsLayer);
   });
