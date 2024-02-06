@@ -42,6 +42,16 @@
   const lauraschoolsLayer = new FeatureLayer({
     url: "https://services1.arcgis.com/pMeXRvgWClLJZr3s/ArcGIS/rest/services/LauraSchools/FeatureServer"
   });
+
+  const trailheadsRenderer = {
+        "type": "simple",
+        "symbol": {
+          "type": "picture-marker",
+          "url": "http://static.arcgis.com/images/Symbols/NPS/npsPictograph_0231b.png",
+          "width": "25px",
+          "height": "25px"
+        }
+      }
     
   map.add(lauraschoolsLayer);
   });
